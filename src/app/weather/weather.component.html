@@ -1,0 +1,30 @@
+<h2>Clima</h2>
+
+<form [formGroup]="locationsForm" (ngSubmit)="obterRegions()">
+
+    <label for="city">Cidade</label>
+    <input type="text" id="city" formControlName="city"required>
+
+    <button type="submit" class="boão verde" [disabled]="!locationsForm.valid">buscar localidade</button>
+</form>
+
+<div *ngIf="locations">
+
+    <div (click)="obterClima(location)" *ngFor="let location of locations; let i = index">
+        {{location.name}} - {{location.state}}
+    </div>
+    
+</div>
+
+<div *ngIf="weatherData">
+
+    <p>Clima: {{weatherData.weather[0].description}}</p>
+
+    <p>Temperatura: {{weatherData.main.temp}}°C</p>
+
+    <p><img src="{{'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'}}"></p>
+</div> 
+
+    
+
+

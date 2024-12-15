@@ -1,0 +1,27 @@
+<h2>Pipes</h2>
+
+<h3>DATAS</h3>
+
+<p>{{ date | date }}</p>
+<p>{{ date | date: 'medium'}}</p>
+<p>{{ date | date: 'shortTime'}}</p>
+<p>{{ date | date: 'HH:mm:ss'}}</p>
+<p>{{ date | date: 'dd MM yyy HH:mm'}}</p>
+
+<h3>Textos</h3>
+
+<label>Name:</label> 
+<input type="text" #name (keyup)="changeName(name.value)">
+
+<p>Em minúsculas:{{ nameText | lowercase}}</p>
+<p>Em maiúsculas:{{ nameText | uppercase}}</p>
+
+<h3>Moedas</h3>
+<p>{{ value | currency}}</p>
+<p>{{ value | currency: 'BRL'}}</p>
+
+<h3>Números Decimais</h3>
+<p>Sem Pipe:{{pi}}</p>
+<p>Com Pipe:{{ pi | number}}</p>
+
+<p>Especificando quantidade de digitos:{{ pi | number: '1.1-5'}}</p>

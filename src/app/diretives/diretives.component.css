@@ -1,0 +1,7 @@
+:host {
+    background: #308888;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

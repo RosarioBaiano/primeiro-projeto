@@ -1,0 +1,26 @@
+:host {
+    border: 2px solid #0c0c0c;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    color: rgb(18, 19, 18);
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 15px 0;
+    border-radius: 45px;
+}
+
+nav a.active {
+
+    font-weight: 700;
+    background: #c2ee01;
+
+}

@@ -1,0 +1,26 @@
+<h2>Hello-World</h2>
+
+<app-filho-a [texto]="textoVaiProfilho" (textoPreenchido)="textoVeioDofilho = $event"></app-filho-a>
+
+<app-filho-b></app-filho-b>
+
+<p>
+    <label for="caixaPai">Digite o texto que vai pro componente filho:</label>
+    <input type="text" id="caixaPai" #caixaPai>
+
+    <button (click)="textoVaiProfilho = caixaPai.value">Enviar pro filho</button>
+</p>
+
+<p *ngIf="textoVeioDofilho">
+    Esse texto veio do filho: {{ textoVeioDofilho }}
+</p>
+
+<p>
+    <a href="/">Home</a>
+</p>
+
+
+<p><a routerLink="filho-a">Filho A</a></p>
+<p><a routerLink="filho-b">Filho B</a></p>
+
+<router-outlet></router-outlet>
